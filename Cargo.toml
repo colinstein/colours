@@ -1,0 +1,7 @@
+[package]
+name = "colours"
+version = "0.1.0"
+authors = ["Colin Stein <colinstein@mac.com>"]
+
+[dependencies]
+colored = "1.6"
