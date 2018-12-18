@@ -15,7 +15,6 @@ const COLORS: [&'static str; 8] = [
 
 fn main() {
     print!("{legend:<width$}", legend="Fg↓/Bg→".black(), width=8);
-    print!("{color:^width$}", color="none".bright_black(), width=8);
     for c in &COLORS {
         print!("{color:^width$}", color=c.bright_black(), width=8);
     }
@@ -24,8 +23,6 @@ fn main() {
     for c in &COLORS {
         let fg_color = c.parse().unwrap_or(Color::White);
         print!("{color:<width$}", color=c.bright_black(), width=8);
-        let dots = MARKER.color(fg_color);
-        print!("{dots:^width$} ", dots=dots, width=7);
 
         for cc in &COLORS {
             let bg_color = cc.parse().unwrap_or(Color::Black);
